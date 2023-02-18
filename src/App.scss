@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+.App {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 500px;
+  width: calc(100% - 120px);
+  gap: 5rem;
+  padding: 1rem;
+  > * {
+    padding: 1rem;
+    border: 1px solid orange;
+  }
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+@media only screen and (max-width: 600px) {
+  .App {
+    grid-template-columns: 100%;
+  }
 }
