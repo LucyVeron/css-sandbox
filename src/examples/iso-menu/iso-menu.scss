@@ -1,6 +1,13 @@
-ul {
-  position: relative;
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+.isomenu {
+  position: fixed;
   transform: skewY(-15deg);
+  top: 6rem;
+  left: 11%;
+  > * {
+    font-family: "Oswald", sans-serif;
+  }
   li {
     position: relative;
     list-style: none;
@@ -57,5 +64,12 @@ ul {
     &:last-child::after {
       box-shadow: -100px 100px 25px rgba(0, 0, 0, 0.6);
     }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .isomenu {
+    position: relative;
+    top: 1rem;
   }
 }

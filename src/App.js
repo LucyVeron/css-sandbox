@@ -1,5 +1,5 @@
 import './App.scss';
-import Glassmorphism from './examples/glassmorphism';
+import GlassLoaders from './examples/glassmorphism';
 import IsoMenu from './examples/iso-menu'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <IsoMenu />
       </div>
       <div>
-        <Glassmorphism />
+        <GlassLoaders />
       </div>
     </div>
   );
