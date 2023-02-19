@@ -6,7 +6,7 @@ function RayTracing() {
   const [rects, setRects] = useState([]);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const [bgImage, setBgImage] = useState('');
+  const [containerBackground, setContainerBackground] = useState('');
   const hues = ["-10", "30", "70", "200"];
 
 
@@ -19,7 +19,7 @@ function RayTracing() {
       const position = currentRect.getBoundingClientRect();
 
       const innerColor = `hsl(${hue}, 100%, 80%)`;
-      const outerColor = `hsl(${hue}, 40%, 30%)`;
+      const outerColor = `hsl(${hue}, 90%, 50%)`;
 
       const diffX = mouseX - position.x;
       const diffY = mouseY - position.y;
@@ -32,7 +32,7 @@ function RayTracing() {
   const mouseMove = (e) => {
     setMouseX(e.clientX);
     setMouseY(e.clientY);
-    setBgImage(`radial-gradient(ellipse at ${mouseX}px ${mouseY}px, #fff, #bbb)`);
+    setContainerBackground(`radial-gradient(ellipse at ${mouseX}px ${mouseY}px, dimgrey, #000)`);
   }
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function RayTracing() {
     <>
       <div
         className="raytracing"
-        style={{ backgroundImage: bgImage }}
+        style={{ backgroundImage: containerBackground }}
         ref={container}
         onMouseMove={(e) => mouseMove(e)}
       >

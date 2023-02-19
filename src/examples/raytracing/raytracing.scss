@@ -1,13 +1,15 @@
 .raytracing {
   display: grid;
-  gap: 1rem;
   grid-template-columns: 50% 50%;
+  overflow: hidden;
   height: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
 .rect {
-  border-radius: 32px;
-  width: 100px;
-  height: 100px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   background: grey;
 }
